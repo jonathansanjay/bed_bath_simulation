@@ -1,0 +1,10 @@
+# Default initial positions for custom_robot's ros2_control fake system
+
+initial_positions:
+  base_link__link1: 0
+  finger_right_joint: 0
+  link1__link2: 0
+  link2__link3: 0
+  link3__link4: 0
+  link4__link5: 0
+  link5__link6: 0

@@ -1,0 +1,2228 @@
+<sdf version='1.7'>
+  <model name='HumanModel'>
+    <link name='Pelvis'>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>7.098</mass>
+        <inertia>
+          <ixx>0.0727621</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.0285149</iyy>
+          <iyz>0</iyz>
+          <izz>0.0804766</izz>
+        </inertia>
+      </inertial>
+      <collision name='Pelvis_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.175 0.3247 0.1326</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='Pelvis_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.583333 1.0303 1.0303</scale>
+            <uri>model://human-gazebo/meshes/Pelvis.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='Pelvis_RightRecAbd_visual_1'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.583333 1.0303 1.0303</scale>
+            <uri>model://human-gazebo/meshes/Pelvis_RightRecAbd.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='Pelvis_RightErcSpin_visual_2'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.583333 1.0303 1.0303</scale>
+            <uri>model://human-gazebo/meshes/Pelvis_RightErcSpin.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='Pelvis_LeftRecAbd_visual_3'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.583333 1.0303 1.0303</scale>
+            <uri>model://human-gazebo/meshes/Pelvis_LeftRecAbd.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='Pelvis_LeftErcSpin_visual_4'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.583333 1.0303 1.0303</scale>
+            <uri>model://human-gazebo/meshes/Pelvis_LeftErcSpin.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='jL5S1_rotx' type='revolute'>
+      <pose relative_to='Pelvis'>0 0 0.0663 0 -0 0</pose>
+      <parent>Pelvis</parent>
+      <child>LowerTrunk_f1</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-0.610865</lower>
+          <upper>0.610865</upper>
+          <effort>30</effort>
+          <velocity>1</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.1</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='LowerTrunk_f1'>
+      <pose relative_to='jL5S1_rotx'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>1e-05</mass>
+        <inertia>
+          <ixx>0</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0</iyy>
+          <iyz>0</iyz>
+          <izz>0</izz>
+        </inertia>
+      </inertial>
+    </link>
+    <joint name='jL5S1_roty' type='revolute'>
+      <pose relative_to='LowerTrunk_f1'>0 0 0 0 -0 0</pose>
+      <parent>LowerTrunk_f1</parent>
+      <child>LowerTrunk</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-0.523599</lower>
+          <upper>1.309</upper>
+          <effort>30</effort>
+          <velocity>1</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.1</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='LowerTrunk'>
+      <pose relative_to='jL5S1_roty'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0.085 0 -0 0</pose>
+        <mass>9.294</mass>
+        <inertia>
+          <ixx>0.09015</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.0461021</iyy>
+          <iyz>0</iyz>
+          <izz>0.091486</izz>
+        </inertia>
+      </inertial>
+      <collision name='LowerTrunk_collision'>
+        <pose>0 0 0.085 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.175 0.2958 0.17</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='LowerTrunk_visual'>
+        <pose>0 0 0.085 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.583333 1.0303 1.0303</scale>
+            <uri>model://human-gazebo/meshes/LowerTrunk.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='LowerTrunk_RightRecAbd_visual_1'>
+        <pose>0 0 0.085 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.583333 1.0303 1.0303</scale>
+            <uri>model://human-gazebo/meshes/LowerTrunk_RightRecAbd.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='LowerTrunk_RightErcSpin_visual_2'>
+        <pose>0 0 0.085 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.583333 1.0303 1.0303</scale>
+            <uri>model://human-gazebo/meshes/LowerTrunk_RightErcSpin.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='LowerTrunk_LefttRecAbd_visual_3'>
+        <pose>0 0 0.085 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.583333 1.0303 1.0303</scale>
+            <uri>model://human-gazebo/meshes/LowerTrunk_LefttRecAbd.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='LowerTrunk_LeftErcSpin_visual_4'>
+        <pose>0 0 0.085 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.583333 1.0303 1.0303</scale>
+            <uri>model://human-gazebo/meshes/LowerTrunk_LeftErcSpin.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='jT9T8_rotx' type='revolute'>
+      <pose relative_to='LowerTrunk'>0 0 0.17 0 -0 0</pose>
+      <parent>LowerTrunk</parent>
+      <child>UpperTrunk_f1</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-0.349066</lower>
+          <upper>0.349066</upper>
+          <effort>30</effort>
+          <velocity>1</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.1</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='UpperTrunk_f1'>
+      <pose relative_to='jT9T8_rotx'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>1e-05</mass>
+        <inertia>
+          <ixx>0</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0</iyy>
+          <iyz>0</iyz>
+          <izz>0</izz>
+        </inertia>
+      </inertial>
+    </link>
+    <joint name='jT9T8_roty' type='revolute'>
+      <pose relative_to='UpperTrunk_f1'>0 0 0 0 -0 0</pose>
+      <parent>UpperTrunk_f1</parent>
+      <child>UpperTrunk_f2</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-0.261799</lower>
+          <upper>0.698132</upper>
+          <effort>30</effort>
+          <velocity>1</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.1</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='UpperTrunk_f2'>
+      <pose relative_to='jT9T8_roty'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>1e-05</mass>
+        <inertia>
+          <ixx>0</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0</iyy>
+          <iyz>0</iyz>
+          <izz>0</izz>
+        </inertia>
+      </inertial>
+    </link>
+    <joint name='jT9T8_rotz' type='revolute'>
+      <pose relative_to='UpperTrunk_f2'>0 0 0 0 -0 0</pose>
+      <parent>UpperTrunk_f2</parent>
+      <child>UpperTrunk</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-0.610865</lower>
+          <upper>0.610865</upper>
+          <effort>30</effort>
+          <velocity>1</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.1</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='UpperTrunk'>
+      <pose relative_to='jT9T8_rotz'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0.0935 0 -0 0</pose>
+        <mass>3.138</mass>
+        <inertia>
+          <ixx>0.0147772</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.0171528</iyy>
+          <iyz>0</iyz>
+          <izz>0.0136413</izz>
+        </inertia>
+      </inertial>
+      <collision name='UpperTrunk_collision'>
+        <pose>0 0 0.0935 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.175 0.146767 0.187</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='UpperTrunk_visual'>
+        <pose>0 0 0.0935 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.583333 1.0303 1.0303</scale>
+            <uri>model://human-gazebo/meshes/UpperTrunk.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='UpperTrunk_RightRecAbd_visual_1'>
+        <pose>0 0 0.0935 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.583333 1.0303 1.0303</scale>
+            <uri>model://human-gazebo/meshes/UpperTrunk_RightRecAbd.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='UpperTrunk_RightErcSpin_visual_2'>
+        <pose>0 0 0.0935 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.583333 1.0303 1.0303</scale>
+            <uri>model://human-gazebo/meshes/UpperTrunk_RightErcSpin.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='UpperTrunk_LeftRecAbd_visual_3'>
+        <pose>0 0 0.0935 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.583333 1.0303 1.0303</scale>
+            <uri>model://human-gazebo/meshes/UpperTrunk_LeftRecAbd.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='UpperTrunk_LeftErcSpin_visual_4'>
+        <pose>0 0 0.0935 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.583333 1.0303 1.0303</scale>
+            <uri>model://human-gazebo/meshes/UpperTrunk_LeftErcSpin.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='jC7LeftShoulder_rotx' type='revolute'>
+      <pose relative_to='UpperTrunk'>0 0.073383 0.158 0 -0 0</pose>
+      <parent>UpperTrunk</parent>
+      <child>LeftShoulder</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-0.0872665</lower>
+          <upper>0.785398</upper>
+          <effort>30</effort>
+          <velocity>1</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.1</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='LeftShoulder'>
+      <pose relative_to='jC7LeftShoulder_rotx'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0.073383 0 1.5708 -0 0</pose>
+        <mass>3.138</mass>
+        <inertia>
+          <ixx>0.01</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.01</iyy>
+          <iyz>0</iyz>
+          <izz>0.01</izz>
+        </inertia>
+      </inertial>
+      <collision name='LeftShoulder_collision'>
+        <pose>0 0.073383 0 1.5708 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.146767</length>
+            <radius>0.029</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name='LeftShoulder_visual'>
+        <pose>0 0.073383 0 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.644444 0.644444 1.0303</scale>
+            <uri>model://human-gazebo/meshes/LeftShoulder.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='jLeftShoulder_rotx' type='revolute'>
+      <pose relative_to='LeftShoulder'>0 0.146767 0 0 -0 0</pose>
+      <parent>LeftShoulder</parent>
+      <child>LeftShoulder_f1</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-1.5708</lower>
+          <upper>2.35619</upper>
+          <effort>30</effort>
+          <velocity>1</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.1</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='LeftShoulder_f1'>
+      <pose relative_to='jLeftShoulder_rotx'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>1e-05</mass>
+        <inertia>
+          <ixx>0</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0</iyy>
+          <iyz>0</iyz>
+          <izz>0</izz>
+        </inertia>
+      </inertial>
+    </link>
+    <joint name='jLeftShoulder_roty' type='revolute'>
+      <pose relative_to='LeftShoulder_f1'>0 0 0 0 -0 0</pose>
+      <parent>LeftShoulder_f1</parent>
+      <child>LeftShoulder_f2</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1.5708</lower>
+          <upper>1.5708</upper>
+          <effort>30</effort>
+          <velocity>1</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.1</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='LeftShoulder_f2'>
+      <pose relative_to='jLeftShoulder_roty'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>1e-05</mass>
+        <inertia>
+          <ixx>0</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0</iyy>
+          <iyz>0</iyz>
+          <izz>0</izz>
+        </inertia>
+      </inertial>
+    </link>
+    <joint name='jLeftShoulder_rotz' type='revolute'>
+      <pose relative_to='LeftShoulder_f2'>0 0 0 0 -0 0</pose>
+      <parent>LeftShoulder_f2</parent>
+      <child>LeftUpperArm</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-3.14159</lower>
+          <upper>0.785398</upper>
+          <effort>30</effort>
+          <velocity>1</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.1</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='LeftUpperArm'>
+      <pose relative_to='jLeftShoulder_rotz'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0.1581 0 1.5708 -0 0</pose>
+        <mass>1.578</mass>
+        <inertia>
+          <ixx>0.0134795</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.0134795</iyy>
+          <iyz>-2.64698e-23</iyz>
+          <izz>0.01</izz>
+        </inertia>
+      </inertial>
+      <collision name='LeftUpperArm_collision'>
+        <pose>0 0.1581 0 1.5708 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.3162</length>
+            <radius>0.029</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name='LeftUpperArm_visual'>
+        <pose>0 0.1581 0 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.644444 0.644444 1.0303</scale>
+            <uri>model://human-gazebo/meshes/LeftUpperArm.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='LeftUpperArm_fixed_joint_lump__LeftTricBrac_visual_1'>
+        <pose>0 0.1581 0 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.644444 0.644444 1.0303</scale>
+            <uri>model://human-gazebo/meshes/LeftTricBrac.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='LeftUpperArm_fixed_joint_lump__LeftBicBrac_visual_2'>
+        <pose>0 0.1581 0 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.644444 0.644444 1.0303</scale>
+            <uri>model://human-gazebo/meshes/LeftBicBrac.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='jLeftElbow_roty' type='revolute'>
+      <pose relative_to='LeftUpperArm'>0 0.3162 0 0 -0 0</pose>
+      <parent>LeftUpperArm</parent>
+      <child>LeftForeArm_f1</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1.5708</lower>
+          <upper>1.48353</upper>
+          <effort>30</effort>
+          <velocity>1</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.1</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='LeftForeArm_f1'>
+      <pose relative_to='jLeftElbow_roty'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>1e-05</mass>
+        <inertia>
+          <ixx>0</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0</iyy>
+          <iyz>0</iyz>
+          <izz>0</izz>
+        </inertia>
+      </inertial>
+    </link>
+    <joint name='jLeftElbow_rotz' type='revolute'>
+      <pose relative_to='LeftForeArm_f1'>0 0 0 0 -0 0</pose>
+      <parent>LeftForeArm_f1</parent>
+      <child>LeftForeArm</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-2.53073</lower>
+          <upper>0</upper>
+          <effort>30</effort>
+          <velocity>1</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.1</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='LeftForeArm'>
+      <pose relative_to='jLeftElbow_rotz'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0.1241 0 1.5708 -0 0</pose>
+        <mass>0.9</mass>
+        <inertia>
+          <ixx>0.01</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.01</iyy>
+          <iyz>-5.9557e-23</iyz>
+          <izz>0.01</izz>
+        </inertia>
+      </inertial>
+      <collision name='LeftForeArm_collision'>
+        <pose>0 0.1241 0 1.5708 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.2482</length>
+            <radius>0.0275</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name='LeftForeArm_visual'>
+        <pose>0 0.1241 0 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.611111 0.611111 1.0303</scale>
+            <uri>model://human-gazebo/meshes/LeftForeArm.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='LeftForeArm_fixed_joint_lump__LeftFlexCarp_visual_1'>
+        <pose>0 0.1241 0 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.611111 0.611111 1.0303</scale>
+            <uri>model://human-gazebo/meshes/LeftFlexCarp.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='LeftForeArm_fixed_joint_lump__LeftExtCarp_visual_2'>
+        <pose>0 0.1241 0 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.611111 0.611111 1.0303</scale>
+            <uri>model://human-gazebo/meshes/LeftExtCarp.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='jLeftWrist_rotx' type='revolute'>
+      <pose relative_to='LeftForeArm'>0 0.2482 0 0 -0 0</pose>
+      <parent>LeftForeArm</parent>
+      <child>LeftHand_f1</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-1.0472</lower>
+          <upper>0.872665</upper>
+          <effort>30</effort>
+          <velocity>1</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.1</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='LeftHand_f1'>
+      <pose relative_to='jLeftWrist_rotx'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>1e-05</mass>
+        <inertia>
+          <ixx>0</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0</iyy>
+          <iyz>0</iyz>
+          <izz>0</izz>
+        </inertia>
+      </inertial>
+    </link>
+    <joint name='jLeftWrist_rotz' type='revolute'>
+      <pose relative_to='LeftHand_f1'>0 0 0 0 -0 0</pose>
+      <parent>LeftHand_f1</parent>
+      <child>LeftHand</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-0.349066</lower>
+          <upper>0.523599</upper>
+          <effort>30</effort>
+          <velocity>1</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.1</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='LeftHand'>
+      <pose relative_to='jLeftWrist_rotz'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0.0918 0 0 -0 0</pose>
+        <mass>0.35401</mass>
+        <inertia>
+          <ixx>0.01</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.01</iyy>
+          <iyz>0</iyz>
+          <izz>0.01</izz>
+        </inertia>
+      </inertial>
+      <collision name='LeftHand_collision'>
+        <pose>0 0.0918 0 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.072 0.1836 0.025</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='LeftHand_visual'>
+        <pose>0 0.0918 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.9 1.0303 0.555556</scale>
+            <uri>model://human-gazebo/meshes/LeftHand.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='LeftHandCOM_visual_1'>
+        <pose>0 0.0918 0 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0 0 0</size>
+          </box>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='jC7RightShoulder_rotx' type='revolute'>
+      <pose relative_to='UpperTrunk'>0 -0.073383 0.158 0 -0 0</pose>
+      <parent>UpperTrunk</parent>
+      <child>RightShoulder</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-0.785398</lower>
+          <upper>0.0872665</upper>
+          <effort>30</effort>
+          <velocity>1</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.1</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='RightShoulder'>
+      <pose relative_to='jC7RightShoulder_rotx'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 -0.073383 0 1.5708 -0 0</pose>
+        <mass>3.138</mass>
+        <inertia>
+          <ixx>0.01</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.01</iyy>
+          <iyz>0</iyz>
+          <izz>0.01</izz>
+        </inertia>
+      </inertial>
+      <collision name='RightShoulder_collision'>
+        <pose>0 -0.073383 0 1.5708 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.146767</length>
+            <radius>0.029</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name='RightShoulder_visual'>
+        <pose>0 -0.073383 0 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.644444 0.644444 1.0303</scale>
+            <uri>model://human-gazebo/meshes/RightShoulder.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='jRightShoulder_rotx' type='revolute'>
+      <pose relative_to='RightShoulder'>0 -0.146767 0 0 -0 0</pose>
+      <parent>RightShoulder</parent>
+      <child>RightShoulder_f1</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-2.35619</lower>
+          <upper>1.5708</upper>
+          <effort>30</effort>
+          <velocity>1</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.1</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='RightShoulder_f1'>
+      <pose relative_to='jRightShoulder_rotx'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>1e-05</mass>
+        <inertia>
+          <ixx>0</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0</iyy>
+          <iyz>0</iyz>
+          <izz>0</izz>
+        </inertia>
+      </inertial>
+    </link>
+    <joint name='jRightShoulder_roty' type='revolute'>
+      <pose relative_to='RightShoulder_f1'>0 0 0 0 -0 0</pose>
+      <parent>RightShoulder_f1</parent>
+      <child>RightShoulder_f2</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1.5708</lower>
+          <upper>1.5708</upper>
+          <effort>30</effort>
+          <velocity>1</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.1</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='RightShoulder_f2'>
+      <pose relative_to='jRightShoulder_roty'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>1e-05</mass>
+        <inertia>
+          <ixx>0</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0</iyy>
+          <iyz>0</iyz>
+          <izz>0</izz>
+        </inertia>
+      </inertial>
+    </link>
+    <joint name='jRightShoulder_rotz' type='revolute'>
+      <pose relative_to='RightShoulder_f2'>0 0 0 0 -0 0</pose>
+      <parent>RightShoulder_f2</parent>
+      <child>RightUpperArm</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-0.785398</lower>
+          <upper>3.14159</upper>
+          <effort>30</effort>
+          <velocity>1</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.1</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='RightUpperArm'>
+      <pose relative_to='jRightShoulder_rotz'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 -0.1581 0 1.5708 -0 0</pose>
+        <mass>1.578</mass>
+        <inertia>
+          <ixx>0.0134795</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.0134795</iyy>
+          <iyz>-2.64698e-23</iyz>
+          <izz>0.01</izz>
+        </inertia>
+      </inertial>
+      <collision name='RightUpperArm_collision'>
+        <pose>0 -0.1581 0 1.5708 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.3162</length>
+            <radius>0.029</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name='RightUpperArm_visual'>
+        <pose>0 -0.1581 0 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.644444 0.644444 1.0303</scale>
+            <uri>model://human-gazebo/meshes/RightUpperArm.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='RightUpperArm_fixed_joint_lump__RightTricBrac_visual_1'>
+        <pose>0 -0.1581 0 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.644444 0.644444 1.0303</scale>
+            <uri>model://human-gazebo/meshes/RightTricBrac.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='RightUpperArm_fixed_joint_lump__RightBicBrac_visual_2'>
+        <pose>0 -0.1581 0 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.644444 0.644444 1.0303</scale>
+            <uri>model://human-gazebo/meshes/RightBicBrac.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='jRightElbow_roty' type='revolute'>
+      <pose relative_to='RightUpperArm'>0 -0.3162 0 0 -0 0</pose>
+      <parent>RightUpperArm</parent>
+      <child>RightForeArm_f1</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1.5708</lower>
+          <upper>1.48353</upper>
+          <effort>30</effort>
+          <velocity>1</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.1</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='RightForeArm_f1'>
+      <pose relative_to='jRightElbow_roty'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>1e-05</mass>
+        <inertia>
+          <ixx>0</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0</iyy>
+          <iyz>0</iyz>
+          <izz>0</izz>
+        </inertia>
+      </inertial>
+    </link>
+    <joint name='jRightElbow_rotz' type='revolute'>
+      <pose relative_to='RightForeArm_f1'>0 0 0 0 -0 0</pose>
+      <parent>RightForeArm_f1</parent>
+      <child>RightForeArm</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>2.53073</upper>
+          <effort>30</effort>
+          <velocity>1</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.1</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='RightForeArm'>
+      <pose relative_to='jRightElbow_rotz'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 -0.1241 0 1.5708 -0 0</pose>
+        <mass>0.9</mass>
+        <inertia>
+          <ixx>0.01</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.01</iyy>
+          <iyz>-5.9557e-23</iyz>
+          <izz>0.01</izz>
+        </inertia>
+      </inertial>
+      <collision name='RightForeArm_collision'>
+        <pose>0 -0.1241 0 1.5708 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.2482</length>
+            <radius>0.0275</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name='RightForeArm_visual'>
+        <pose>0 -0.1241 0 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.611111 0.611111 1.0303</scale>
+            <uri>model://human-gazebo/meshes/RightForeArm.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='RightForeArm_fixed_joint_lump__RightFlexCarp_visual_1'>
+        <pose>0 -0.1241 0 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.611111 0.611111 1.0303</scale>
+            <uri>model://human-gazebo/meshes/RightFlexCarp.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='RightForeArm_fixed_joint_lump__RightExtCarp_visual_2'>
+        <pose>0 -0.1241 0 1.5708 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.611111 0.611111 1.0303</scale>
+            <uri>model://human-gazebo/meshes/RightExtCarp.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='jRightWrist_rotx' type='revolute'>
+      <pose relative_to='RightForeArm'>0 -0.2482 0 0 -0 0</pose>
+      <parent>RightForeArm</parent>
+      <child>RightHand_f1</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-0.872665</lower>
+          <upper>1.0472</upper>
+          <effort>30</effort>
+          <velocity>1</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.1</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='RightHand_f1'>
+      <pose relative_to='jRightWrist_rotx'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>1e-05</mass>
+        <inertia>
+          <ixx>0</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0</iyy>
+          <iyz>0</iyz>
+          <izz>0</izz>
+        </inertia>
+      </inertial>
+    </link>
+    <joint name='jRightWrist_rotz' type='revolute'>
+      <pose relative_to='RightHand_f1'>0 0 0 0 -0 0</pose>
+      <parent>RightHand_f1</parent>
+      <child>RightHand</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-0.523599</lower>
+          <upper>0.349066</upper>
+          <effort>30</effort>
+          <velocity>1</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.1</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='RightHand'>
+      <pose relative_to='jRightWrist_rotz'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 -0.0918 0 0 -0 0</pose>
+        <mass>0.35401</mass>
+        <inertia>
+          <ixx>0.01</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.01</iyy>
+          <iyz>0</iyz>
+          <izz>0.01</izz>
+        </inertia>
+      </inertial>
+      <collision name='RightHand_collision'>
+        <pose>0 -0.0918 0 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.072 0.1836 0.025</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='RightHand_visual'>
+        <pose>0 -0.0918 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.9 1.0303 0.555556</scale>
+            <uri>model://human-gazebo/meshes/RightHand.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='RightHandCOM_visual_1'>
+        <pose>0 -0.0918 0 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0 0 0</size>
+          </box>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='jT1C7_rotx' type='revolute'>
+      <pose relative_to='UpperTrunk'>0 0 0.187 0 -0 0</pose>
+      <parent>UpperTrunk</parent>
+      <child>Neck_f1</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-0.610865</lower>
+          <upper>0.610865</upper>
+          <effort>30</effort>
+          <velocity>1</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.1</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='Neck_f1'>
+      <pose relative_to='jT1C7_rotx'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>1e-05</mass>
+        <inertia>
+          <ixx>0</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0</iyy>
+          <iyz>0</iyz>
+          <izz>0</izz>
+        </inertia>
+      </inertial>
+    </link>
+    <joint name='jT1C7_roty' type='revolute'>
+      <pose relative_to='Neck_f1'>0 0 0 0 -0 0</pose>
+      <parent>Neck_f1</parent>
+      <child>Neck_f2</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-0.959931</lower>
+          <upper>1.5708</upper>
+          <effort>30</effort>
+          <velocity>1</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.1</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='Neck_f2'>
+      <pose relative_to='jT1C7_roty'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>1e-05</mass>
+        <inertia>
+          <ixx>0</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0</iyy>
+          <iyz>0</iyz>
+          <izz>0</izz>
+        </inertia>
+      </inertial>
+    </link>
+    <joint name='jT1C7_rotz' type='revolute'>
+      <pose relative_to='Neck_f2'>0 0 0 0 -0 0</pose>
+      <parent>Neck_f2</parent>
+      <child>Neck</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-1.22173</lower>
+          <upper>1.22173</upper>
+          <effort>30</effort>
+          <velocity>1</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.1</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='Neck'>
+      <pose relative_to='jT1C7_rotz'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0.0442 0 -0 0</pose>
+        <mass>1.164</mass>
+        <inertia>
+          <ixx>0.01</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.01</iyy>
+          <iyz>0</iyz>
+          <izz>0.01</izz>
+        </inertia>
+      </inertial>
+      <collision name='Neck_collision'>
+        <pose>0 0 0.0442 0 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.0884</length>
+            <radius>0.0475</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name='Neck_visual'>
+        <pose>0 0 0.0442 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.730769 0.730769 1.0303</scale>
+            <uri>model://human-gazebo/meshes/Neck.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='jC1Head_rotx' type='revolute'>
+      <pose relative_to='Neck'>0 0 0.0884 0 -0 0</pose>
+      <parent>Neck</parent>
+      <child>Head_f1</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-0.610865</lower>
+          <upper>0.610865</upper>
+          <effort>30</effort>
+          <velocity>1</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.1</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='Head_f1'>
+      <pose relative_to='jC1Head_rotx'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>1e-05</mass>
+        <inertia>
+          <ixx>0</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0</iyy>
+          <iyz>0</iyz>
+          <izz>0</izz>
+        </inertia>
+      </inertial>
+    </link>
+    <joint name='jC1Head_roty' type='revolute'>
+      <pose relative_to='Head_f1'>0 0 0 0 -0 0</pose>
+      <parent>Head_f1</parent>
+      <child>Head</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-0.436332</lower>
+          <upper>0.174533</upper>
+          <effort>30</effort>
+          <velocity>1</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.1</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='Head'>
+      <pose relative_to='jC1Head_roty'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0.1105 0 -0 0</pose>
+        <mass>2.922</mass>
+        <inertia>
+          <ixx>0.0142713</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.0142713</iyy>
+          <iyz>0</iyz>
+          <izz>0.0142713</izz>
+        </inertia>
+      </inertial>
+      <collision name='Head_collision'>
+        <pose>0 0 0.1105 0 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.1105</radius>
+          </sphere>
+        </geometry>
+      </collision>
+      <visual name='Head_visual'>
+        <pose>0 0 0.1105 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1.0303 1.0303 1.0303</scale>
+            <uri>model://human-gazebo/meshes/Head.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='jLeftHip_rotx' type='revolute'>
+      <pose relative_to='Pelvis'>0 0.09985 -0.0663 0 -0 0</pose>
+      <parent>Pelvis</parent>
+      <child>LeftUpperLeg_f1</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-0.523599</lower>
+          <upper>0.785398</upper>
+          <effort>30</effort>
+          <velocity>1</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.1</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='LeftUpperLeg_f1'>
+      <pose relative_to='jLeftHip_rotx'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>1e-05</mass>
+        <inertia>
+          <ixx>0</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0</iyy>
+          <iyz>0</iyz>
+          <izz>0</izz>
+        </inertia>
+      </inertial>
+    </link>
+    <joint name='jLeftHip_roty' type='revolute'>
+      <pose relative_to='LeftUpperLeg_f1'>0 0 0 0 -0 0</pose>
+      <parent>LeftUpperLeg_f1</parent>
+      <child>LeftUpperLeg_f2</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-2.0944</lower>
+          <upper>0.261799</upper>
+          <effort>30</effort>
+          <velocity>1</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.1</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='LeftUpperLeg_f2'>
+      <pose relative_to='jLeftHip_roty'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>1e-05</mass>
+        <inertia>
+          <ixx>0</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0</iyy>
+          <iyz>0</iyz>
+          <izz>0</izz>
+        </inertia>
+      </inertial>
+    </link>
+    <joint name='jLeftHip_rotz' type='revolute'>
+      <pose relative_to='LeftUpperLeg_f2'>0 0 0 0 -0 0</pose>
+      <parent>LeftUpperLeg_f2</parent>
+      <child>LeftUpperLeg</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-0.785398</lower>
+          <upper>0.785398</upper>
+          <effort>30</effort>
+          <velocity>1</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.1</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='LeftUpperLeg'>
+      <pose relative_to='jLeftHip_rotz'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 -0.20825 0 -0 0</pose>
+        <mass>8.682</mass>
+        <inertia>
+          <ixx>0.133986</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.133986</iyy>
+          <iyz>0</iyz>
+          <izz>0.016957</izz>
+        </inertia>
+      </inertial>
+      <collision name='LeftUpperLeg_collision'>
+        <pose>0 0 -0.20825 0 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.4165</length>
+            <radius>0.0625</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name='LeftUpperLeg_visual'>
+        <pose>0 0 -0.20825 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.833333 0.833333 1.0303</scale>
+            <uri>model://human-gazebo/meshes/LeftUpperLeg.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='LeftUpperLeg_fixed_joint_lump__LeftRecFem_visual_1'>
+        <pose>0 0 -0.20825 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.833333 0.833333 1.0303</scale>
+            <uri>model://human-gazebo/meshes/LeftRecFem.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='LeftUpperLeg_fixed_joint_lump__LeftBicFem_visual_2'>
+        <pose>0 0 -0.20825 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.833333 0.833333 1.0303</scale>
+            <uri>model://human-gazebo/meshes/LeftBicFem.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='jLeftKnee_roty' type='revolute'>
+      <pose relative_to='LeftUpperLeg'>0 0 -0.4165 0 -0 0</pose>
+      <parent>LeftUpperLeg</parent>
+      <child>LeftLowerLeg_f1</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>2.35619</upper>
+          <effort>30</effort>
+          <velocity>1</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.1</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='LeftLowerLeg_f1'>
+      <pose relative_to='jLeftKnee_roty'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>1e-05</mass>
+        <inertia>
+          <ixx>0</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0</iyy>
+          <iyz>0</iyz>
+          <izz>0</izz>
+        </inertia>
+      </inertial>
+    </link>
+    <joint name='jLeftKnee_rotz' type='revolute'>
+      <pose relative_to='LeftLowerLeg_f1'>0 0 0 0 -0 0</pose>
+      <parent>LeftLowerLeg_f1</parent>
+      <child>LeftLowerLeg</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-0.523599</lower>
+          <upper>0.698132</upper>
+          <effort>30</effort>
+          <velocity>1</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.1</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='LeftLowerLeg'>
+      <pose relative_to='jLeftKnee_rotz'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 -0.2091 0 -0 0</pose>
+        <mass>2.742</mass>
+        <inertia>
+          <ixx>0.0413508</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.0413508</iyy>
+          <iyz>0</iyz>
+          <izz>0.01</izz>
+        </inertia>
+      </inertial>
+      <collision name='LeftLowerLeg_collision'>
+        <pose>0 0 -0.2091 0 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.4182</length>
+            <radius>0.045</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name='LeftLowerLeg_visual'>
+        <pose>0 0 -0.2091 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.782609 0.782609 1.0303</scale>
+            <uri>model://human-gazebo/meshes/LeftLowerLeg.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='LeftLowerLeg_fixed_joint_lump__LeftTibAnt_visual_1'>
+        <pose>0 0 -0.2091 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.782609 0.782609 1.0303</scale>
+            <uri>model://human-gazebo/meshes/LeftTibAnt.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='LeftLowerLeg_fixed_joint_lump__LeftGasMed_visual_2'>
+        <pose>0 0 -0.2091 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.782609 0.782609 1.0303</scale>
+            <uri>model://human-gazebo/meshes/LeftGasMed.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='LeftLowerLeg_fixed_joint_lump__LeftGasLat_visual_3'>
+        <pose>0 0 -0.2091 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.782609 0.782609 1.0303</scale>
+            <uri>model://human-gazebo/meshes/LeftGasLat.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='jLeftAnkle_rotx' type='revolute'>
+      <pose relative_to='LeftLowerLeg'>0 0 -0.4182 0 -0 0</pose>
+      <parent>LeftLowerLeg</parent>
+      <child>LeftFoot_f1</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-0.785398</lower>
+          <upper>0.610865</upper>
+          <effort>30</effort>
+          <velocity>1</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.1</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='LeftFoot_f1'>
+      <pose relative_to='jLeftAnkle_rotx'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>1e-05</mass>
+        <inertia>
+          <ixx>0</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0</iyy>
+          <iyz>0</iyz>
+          <izz>0</izz>
+        </inertia>
+      </inertial>
+    </link>
+    <joint name='jLeftAnkle_roty' type='revolute'>
+      <pose relative_to='LeftFoot_f1'>0 0 0 0 -0 0</pose>
+      <parent>LeftFoot_f1</parent>
+      <child>LeftFoot_f2</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-0.523599</lower>
+          <upper>0.872665</upper>
+          <effort>30</effort>
+          <velocity>1</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.1</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='LeftFoot_f2'>
+      <pose relative_to='jLeftAnkle_roty'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>1e-05</mass>
+        <inertia>
+          <ixx>0</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0</iyy>
+          <iyz>0</iyz>
+          <izz>0</izz>
+        </inertia>
+      </inertial>
+    </link>
+    <joint name='jLeftAnkle_rotz' type='revolute'>
+      <pose relative_to='LeftFoot_f2'>0 0 0 0 -0 0</pose>
+      <parent>LeftFoot_f2</parent>
+      <child>LeftFoot</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-0.872665</lower>
+          <upper>0.436332</upper>
+          <effort>30</effort>
+          <velocity>1</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.1</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='LeftFoot'>
+      <pose relative_to='jLeftAnkle_rotz'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0.084199 0 -0.033151 0 -0 0</pose>
+        <mass>0.79003</mass>
+        <inertia>
+          <ixx>0.0100001</ixx>
+          <ixy>0</ixy>
+          <ixz>-4.16063e-08</ixz>
+          <iyy>0.0100001</iyy>
+          <iyz>0</iyz>
+          <izz>0.01</izz>
+        </inertia>
+      </inertial>
+      <collision name='LeftFoot_collision'>
+        <pose>0.0842 0 -0.03315 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.2584 0.0935 0.0663</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='LeftFoot_visual'>
+        <pose>0.0842 0 -0.03315 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1.0303 1.0303 1.0303</scale>
+            <uri>model://human-gazebo/meshes/LeftFoot.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='LeftFoot_fixed_joint_lump__LeftFTSensor_visual_1'>
+        <pose>0.037 0 -0.1213 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0 0 0</size>
+          </box>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='jLeftBallFoot_roty' type='revolute'>
+      <pose relative_to='LeftFoot'>0.214692 0 -0.03315 0 -0 0</pose>
+      <parent>LeftFoot</parent>
+      <child>LeftToe</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-0.174533</lower>
+          <upper>1.5708</upper>
+          <effort>30</effort>
+          <velocity>1</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.1</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='LeftToe'>
+      <pose relative_to='jLeftBallFoot_roty'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.00798</mass>
+        <inertia>
+          <ixx>0.01</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.01</iyy>
+          <iyz>0</iyz>
+          <izz>0.01</izz>
+        </inertia>
+      </inertial>
+      <collision name='LeftToe_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.002584 0.0935 0.0663</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='LeftToe_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1.0303 1.0303 1.0303</scale>
+            <uri>model://human-gazebo/meshes/LeftToe.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='jRightHip_rotx' type='revolute'>
+      <pose relative_to='Pelvis'>0 -0.09985 -0.0663 0 -0 0</pose>
+      <parent>Pelvis</parent>
+      <child>RightUpperLeg_f1</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-0.785398</lower>
+          <upper>0.523599</upper>
+          <effort>30</effort>
+          <velocity>1</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.1</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='RightUpperLeg_f1'>
+      <pose relative_to='jRightHip_rotx'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>1e-05</mass>
+        <inertia>
+          <ixx>0</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0</iyy>
+          <iyz>0</iyz>
+          <izz>0</izz>
+        </inertia>
+      </inertial>
+    </link>
+    <joint name='jRightHip_roty' type='revolute'>
+      <pose relative_to='RightUpperLeg_f1'>0 0 0 0 -0 0</pose>
+      <parent>RightUpperLeg_f1</parent>
+      <child>RightUpperLeg_f2</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-2.0944</lower>
+          <upper>0.261799</upper>
+          <effort>30</effort>
+          <velocity>1</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.1</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='RightUpperLeg_f2'>
+      <pose relative_to='jRightHip_roty'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>1e-05</mass>
+        <inertia>
+          <ixx>0</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0</iyy>
+          <iyz>0</iyz>
+          <izz>0</izz>
+        </inertia>
+      </inertial>
+    </link>
+    <joint name='jRightHip_rotz' type='revolute'>
+      <pose relative_to='RightUpperLeg_f2'>0 0 0 0 -0 0</pose>
+      <parent>RightUpperLeg_f2</parent>
+      <child>RightUpperLeg</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-0.785398</lower>
+          <upper>0.785398</upper>
+          <effort>30</effort>
+          <velocity>1</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.1</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='RightUpperLeg'>
+      <pose relative_to='jRightHip_rotz'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 -0.20825 0 -0 0</pose>
+        <mass>8.682</mass>
+        <inertia>
+          <ixx>0.133986</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.133986</iyy>
+          <iyz>0</iyz>
+          <izz>0.016957</izz>
+        </inertia>
+      </inertial>
+      <collision name='RightUpperLeg_collision'>
+        <pose>0 0 -0.20825 0 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.4165</length>
+            <radius>0.0625</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name='RightUpperLeg_visual'>
+        <pose>0 0 -0.20825 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.833333 0.833333 1.0303</scale>
+            <uri>model://human-gazebo/meshes/RightUpperLeg.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='RightUpperLeg_fixed_joint_lump__RightRecFem_visual_1'>
+        <pose>0 0 -0.20825 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.833333 0.833333 1.0303</scale>
+            <uri>model://human-gazebo/meshes/RightRecFem.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='RightUpperLeg_fixed_joint_lump__RightBicFem_visual_2'>
+        <pose>0 0 -0.20825 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.833333 0.833333 1.0303</scale>
+            <uri>model://human-gazebo/meshes/RightBicFem.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='jRightKnee_roty' type='revolute'>
+      <pose relative_to='RightUpperLeg'>0 0 -0.4165 0 -0 0</pose>
+      <parent>RightUpperLeg</parent>
+      <child>RightLowerLeg_f1</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>2.35619</upper>
+          <effort>30</effort>
+          <velocity>1</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.1</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='RightLowerLeg_f1'>
+      <pose relative_to='jRightKnee_roty'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>1e-05</mass>
+        <inertia>
+          <ixx>0</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0</iyy>
+          <iyz>0</iyz>
+          <izz>0</izz>
+        </inertia>
+      </inertial>
+    </link>
+    <joint name='jRightKnee_rotz' type='revolute'>
+      <pose relative_to='RightLowerLeg_f1'>0 0 0 0 -0 0</pose>
+      <parent>RightLowerLeg_f1</parent>
+      <child>RightLowerLeg</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-0.698132</lower>
+          <upper>0.523599</upper>
+          <effort>30</effort>
+          <velocity>1</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.1</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='RightLowerLeg'>
+      <pose relative_to='jRightKnee_rotz'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 -0.2091 0 -0 0</pose>
+        <mass>2.742</mass>
+        <inertia>
+          <ixx>0.0413508</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.0413508</iyy>
+          <iyz>0</iyz>
+          <izz>0.01</izz>
+        </inertia>
+      </inertial>
+      <collision name='RightLowerLeg_collision'>
+        <pose>0 0 -0.2091 0 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.4182</length>
+            <radius>0.045</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name='RightLowerLeg_visual'>
+        <pose>0 0 -0.2091 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.782609 0.782609 1.0303</scale>
+            <uri>model://human-gazebo/meshes/RightLowerLeg.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='RightLowerLeg_fixed_joint_lump__RightTibAnt_visual_1'>
+        <pose>0 0 -0.2091 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.782609 0.782609 1.0303</scale>
+            <uri>model://human-gazebo/meshes/RightTibAnt.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='RightLowerLeg_fixed_joint_lump__RightGasMed_visual_2'>
+        <pose>0 0 -0.2091 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.782609 0.782609 1.0303</scale>
+            <uri>model://human-gazebo/meshes/RightGasMed.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='RightLowerLeg_fixed_joint_lump__RightGasLat_visual_3'>
+        <pose>0 0 -0.2091 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>0.782609 0.782609 1.0303</scale>
+            <uri>model://human-gazebo/meshes/RightGasLat.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='jRightAnkle_rotx' type='revolute'>
+      <pose relative_to='RightLowerLeg'>0 0 -0.4182 0 -0 0</pose>
+      <parent>RightLowerLeg</parent>
+      <child>RightFoot_f1</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-0.610865</lower>
+          <upper>0.785398</upper>
+          <effort>30</effort>
+          <velocity>1</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.1</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='RightFoot_f1'>
+      <pose relative_to='jRightAnkle_rotx'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>1e-05</mass>
+        <inertia>
+          <ixx>0</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0</iyy>
+          <iyz>0</iyz>
+          <izz>0</izz>
+        </inertia>
+      </inertial>
+    </link>
+    <joint name='jRightAnkle_roty' type='revolute'>
+      <pose relative_to='RightFoot_f1'>0 0 0 0 -0 0</pose>
+      <parent>RightFoot_f1</parent>
+      <child>RightFoot_f2</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-0.523599</lower>
+          <upper>0.872665</upper>
+          <effort>30</effort>
+          <velocity>1</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.1</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='RightFoot_f2'>
+      <pose relative_to='jRightAnkle_roty'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>1e-05</mass>
+        <inertia>
+          <ixx>0</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0</iyy>
+          <iyz>0</iyz>
+          <izz>0</izz>
+        </inertia>
+      </inertial>
+    </link>
+    <joint name='jRightAnkle_rotz' type='revolute'>
+      <pose relative_to='RightFoot_f2'>0 0 0 0 -0 0</pose>
+      <parent>RightFoot_f2</parent>
+      <child>RightFoot</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-0.436332</lower>
+          <upper>0.872665</upper>
+          <effort>30</effort>
+          <velocity>1</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.1</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='RightFoot'>
+      <pose relative_to='jRightAnkle_rotz'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0.084199 0 -0.033151 0 -0 0</pose>
+        <mass>0.79003</mass>
+        <inertia>
+          <ixx>0.0100001</ixx>
+          <ixy>0</ixy>
+          <ixz>-4.16063e-08</ixz>
+          <iyy>0.0100001</iyy>
+          <iyz>0</iyz>
+          <izz>0.01</izz>
+        </inertia>
+      </inertial>
+      <collision name='RightFoot_collision'>
+        <pose>0.0842 0 -0.03315 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.2584 0.0935 0.0663</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='RightFoot_visual'>
+        <pose>0.0842 0 -0.03315 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1.0303 1.0303 1.0303</scale>
+            <uri>model://human-gazebo/meshes/RightFoot.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='RightFoot_fixed_joint_lump__RightFTSensor_visual_1'>
+        <pose>0.037 0 -0.1213 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0 0 0</size>
+          </box>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='jRightBallFoot_roty' type='revolute'>
+      <pose relative_to='RightFoot'>0.214692 0 -0.03315 0 -0 0</pose>
+      <parent>RightFoot</parent>
+      <child>RightToe</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-0.174533</lower>
+          <upper>1.5708</upper>
+          <effort>30</effort>
+          <velocity>1</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.1</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='RightToe'>
+      <pose relative_to='jRightBallFoot_roty'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 -0 0</pose>
+        <mass>0.00798</mass>
+        <inertia>
+          <ixx>0.01</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.01</iyy>
+          <iyz>0</iyz>
+          <izz>0.01</izz>
+        </inertia>
+      </inertial>
+      <collision name='RightToe_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.002584 0.0935 0.0663</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='RightToe_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1.0303 1.0303 1.0303</scale>
+            <uri>model://human-gazebo/meshes/RightToe.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>
