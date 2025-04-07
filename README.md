@@ -1,7 +1,7 @@
-# Pick and Care - 6-Axis Robot
+# Robot-Assisted Bed Baths for Patients with Limited Mobility - 6-DOF Robot
 
 ## Description
-This project implements a **Pick and Care** application using a 6-axis robot in **Gazebo**. The robot is launched with its controllers, streams camera data, and utilizes a point cloud-based perception pipeline to identify a human. The robot is programmed to pick up a sponge and approach the identified person, simulating an assistive interaction.
+This project implements a **obot-Assisted Bed Bath** application using a 6-DOF robot in **Gazebo**. The robot is launched with its controllers, streams camera data, and utilizes a point cloud-based perception pipeline to identify a human. The robot is programmed to pick up a sponge and approach the identified person, simulating an assistive interaction.
 
 ## Features
 - **Spawn the robot in Gazebo** with all necessary controllers
@@ -22,7 +22,7 @@ This project implements a **Pick and Care** application using a 6-axis robot in 
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/LearnRoboticsWROS/care_robot_ws/
+   git clone https://github.com/jonathansanjay/bed_bath_simulation/
    mkdir your_ws
    cd your_ws
    mkdir src
@@ -46,7 +46,7 @@ This project implements a **Pick and Care** application using a 6-axis robot in 
    sudo apt install ros-humble-sensor-msgs
    sudo apt install ros-humble-pcl-conversions
    sudo apt install ros-humble-pcl-ros
-   sudo apt install ros-humble-pcl-tools
+   sudo apt install pcl-tools
    ```
 
 3. Copy in your workspace the packages care_robot_sim, cobot_moveit_config and cobot_ik
@@ -88,8 +88,3 @@ Execute the pick and care routine:
 ```bash
 ros2 run cobot_ik test_pick_care_waypoints
 ```
-
-
-
----
-📧 For questions, contact me at **your.email@example.com**
