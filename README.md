@@ -83,7 +83,7 @@ Begin camera data streaming:
 ros2 run cobot_ik process_points_stream
 ```
 
-### 3 Run the Pick and Care Sequence
+### 3️⃣ Run the Pick and Care Sequence
 Execute the pick and care routine:
 ```bash
 ros2 run cobot_ik test_pick_care_waypoints
